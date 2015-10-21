@@ -1,0 +1,5 @@
+  RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteRule ^embed/(.*)$ index.php/embed/index/$1 [NC,L]
+   RewriteCond $1 !^(index\.php|assets|gplayer|robots\.txt|.*\.css|.*\.ico)
+    RewriteRule ^(.*)$ index.php/$1 [QSA,L]
